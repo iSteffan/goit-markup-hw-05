@@ -307,6 +307,16 @@ img {
   background: #188ce8;
 }
 
+.button-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: inherit;
+}
+
 .button-portfolio {
   padding: 6px 22px;
 
