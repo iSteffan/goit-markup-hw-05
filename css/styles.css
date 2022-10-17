@@ -79,11 +79,6 @@ img {
   align-items: center;
 }
 
-.navigation-list-link:hover,
-.navigation-list-link:focus {
-  color: var(--accent-color);
-}
-
 .navigation-list-link {
   font-weight: 500;
   font-size: 14px;
@@ -91,6 +86,15 @@ img {
   letter-spacing: 0.02em;
   color: var(--text-color-main);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list-link:hover,
+.navigation-list-link:focus {
+  color: var(--accent-color);
 }
 
 .contacts-list-link {
@@ -102,6 +106,10 @@ img {
   letter-spacing: 0.02em;
   color: var(--text-color-secondary);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-list-link:hover,
@@ -155,19 +163,21 @@ img {
 /* -------------------------------------------іконки------------------------------------------- */
 
 /* ---------------------------Хедер іконки--------------------------- */
-.contacts-list-link:focus > .envelope {
-  fill: var(--accent-color);
-}
-.contacts-list-link:hover > .envelope {
-  fill: var(--accent-color);
-}
-
 .envelope {
   margin-right: 10px;
 
   width: 16px;
   height: 16px;
   fill: #757575;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-list-link:focus > .envelope,
+.contacts-list-link:hover > .envelope {
+  fill: var(--accent-color);
 }
 
 .smartphone {
@@ -176,14 +186,17 @@ img {
   width: 10px;
   height: 16px;
   fill: #757575;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-list-link:focus > .smartphone {
-  fill: var(--accent-color);
-}
+.contacts-list-link:focus > .smartphone,
 .contacts-list-link:hover > .smartphone {
   fill: var(--accent-color);
 }
+
 /* ---------------------------Index іконки--------------------------- */
 .icon-advantage-flex {
   display: flex;
@@ -221,16 +234,6 @@ img {
   width: calc((100% - 150px) / 6);
 }
 
-.client-list-link:hover,
-.client-list-link:focus {
-  border: 1px solid var(--accent-color);
-}
-
-.client-list-link:hover .icon-client,
-.client-list-link:focus .icon-client {
-  fill: var(--accent-color);
-}
-
 .client-list-link {
   display: flex;
   justify-content: center;
@@ -239,14 +242,36 @@ img {
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
+
+  transition-property: border;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-list-link:hover,
+.client-list-link:focus {
+  border: 1px solid var(--accent-color);
 }
 
 .icon-client {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.client-list-link:hover .icon-client,
+.client-list-link:focus .icon-client {
+  fill: var(--accent-color);
 }
 
 .icon-social-link {
   fill: #afb1b8;
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-link {
@@ -257,20 +282,19 @@ img {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  background-color: #ffffff;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-link:hover {
-  background-color: var(--accent-color);
-}
-
+.social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
 }
 
-.social-link:hover > .icon-social-link {
-  fill: #ffffff;
-}
-
+.social-link:hover > .icon-social-link,
 .social-link:focus > .icon-social-link {
   fill: #ffffff;
 }
@@ -287,8 +311,12 @@ img {
 
   width: 44px;
   height: 44px;
-  background: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
+
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-list-item > a > svg {
@@ -315,6 +343,10 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border-color: transparent;
+
+  transition-property: background;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order:hover,
@@ -346,6 +378,9 @@ img {
   border-radius: 4px;
   cursor: pointer;
   border-color: transparent;
+
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
@@ -353,7 +388,6 @@ img {
   background: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   color: #ffffff;
 }
 
@@ -379,11 +413,6 @@ img {
   text-decoration: none;
 }
 
-.contacts-footer:hover,
-.contacts-footer:focus {
-  color: var(--accent-color);
-}
-
 .contacts-footer {
   font-weight: 400;
   font-size: 14px;
@@ -391,6 +420,15 @@ img {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contacts-footer:hover,
+.contacts-footer:focus {
+  color: var(--accent-color);
 }
 
 .address-list {
@@ -651,6 +689,10 @@ img {
   width: calc((100% - 60px) / 3);
   border: 1px solid #eeeeee;
   list-style: none;
+
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-list-item:hover {
