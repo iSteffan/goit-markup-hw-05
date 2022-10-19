@@ -742,7 +742,7 @@ img {
   overflow: hidden;
 }
 
-.thumb::before {
+.overlay {
   display: block;
   content: '';
   transform: translatey(100%);
@@ -761,7 +761,6 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 0;
 
   width: 322px;
   height: 168px;
@@ -773,9 +772,6 @@ img {
   color: #ffffff;
 }
 
-.project-list-item:hover .thumb::before {
+.project-list-item:hover .overlay {
   transform: translatey(0);
-}
-.project-list-item:hover .overlay-text {
-  opacity: 1;
 }
