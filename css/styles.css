@@ -452,10 +452,10 @@ img {
 .footer-flex {
   display: flex;
   gap: 70px;
+  align-items: baseline;
 }
 
 .join-title {
-  margin-top: 12px;
   margin-bottom: 20px;
 
   font-weight: 700;
@@ -686,6 +686,8 @@ img {
 }
 
 .project-list-item {
+  position: relative;
+
   width: calc((100% - 60px) / 3);
   border: 1px solid #eeeeee;
   list-style: none;
@@ -693,6 +695,10 @@ img {
   transition-property: box-shadow;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-list-link {
+  text-decoration: none;
 }
 
 .project-list-item:hover {
@@ -715,6 +721,7 @@ img {
 .project-title {
   margin-bottom: 4px;
 
+  color: var(--text-color-main);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -726,4 +733,38 @@ img {
   line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--text-color-secondary);
+}
+
+/* ----------------------------------------Portfolio.html overlay---------------------------------------- */
+.thumb {
+  position: relative;
+}
+
+.thumb::before {
+  display: block;
+  content: '';
+  transform: translatey(-100%);
+
+  background-color: rgba(33, 150, 243, 0.9);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 322px;
+  height: 168px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
 }
